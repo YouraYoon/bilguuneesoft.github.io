@@ -10,7 +10,10 @@
 
             // 1. 안드로이드 기기 (구글 플레이스토어 전체 주소 입력)
             if (/android/i.test(userAgent)) {
-                window.location.href = "https://play.google.com/store/apps/details?id=com.bilguuneesoft.polygondefense";
+                var packageId = "com.bilguuneesoft.polygondefense";
+    
+    // 크롬 및 최신 안드로이드 브라우저에서 플레이스토어 앱을 다이렉트로 여는 딥링크
+    window.location.href = "intent://details?id=" + packageId + "#Intent;scheme=market;package=com.android.vending;end";
             } 
             // 2. iOS 기기 (아이폰/아이패드 애플 앱스토어 전체 주소 입력)
             else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
