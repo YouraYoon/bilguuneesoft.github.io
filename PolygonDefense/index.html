@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to Store...</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // 1. 안드로이드 기기 (구글 플레이스토어 전체 주소 입력)
+            if (/android/i.test(userAgent)) {
+                window.location.href = "https://play.google.com/store/apps/details?id=내_안드로이드_패키지_명";
+            } 
+            // 2. iOS 기기 (아이폰/아이패드 애플 앱스토어 전체 주소 입력)
+            else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.href = "https://apps.apple.com/app/내_앱스토어_ID";
+            } 
+            // 3. PC 브라우저 등으로 접속했을 때 보낼 기본 주소 (홈페이지 등)
+            else {
+                window.location.href = "https://bilguuneesoft.com"; 
+            }
+        }
+    </script>
+</head>
+<body>
+    <p style="text-align:center; margin-top:50px; font-family:sans-serif; color:#ffffff; background-color:#000000;">
+        Redirecting to the app store...
+    </p>
+</body>
+</html>
