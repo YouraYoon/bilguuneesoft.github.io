@@ -1,4 +1,5 @@
 google.com, pub-1697127670870208, DIRECT, f08c47fec0942fa0
+facebook.com, 1060341946052002, DIRECT, c3e20eee3f780d68
 loopme.com, 11463, RESELLER, 6c8d5f95897a5a3b
 voisetech.com, 1066, RESELLER
 triplelift.com, 14798, RESELLER, 6c33edb13117fd86
